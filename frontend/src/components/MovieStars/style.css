@@ -1,0 +1,10 @@
+.rtm-stars-container {
+	width: 130px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.rtm-stars-container i {
+	font-size: 22px;
+	color: #ffbb3a;
+}
