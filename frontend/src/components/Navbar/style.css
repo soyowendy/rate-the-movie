@@ -1,0 +1,27 @@
+header {
+	background-color: var(--rtm-primary-color);
+	height: 60px;
+	display:flex;
+	align-items: center;
+	color: white;
+}
+
+.rtm-nav-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.rtm-nav-content h1 {
+	margin: 0;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+
+.rtm-nav-content-links {
+	font-size: 24px;
+	display: grid;
+	grid-auto-flow: column;
+	gap: 12px;
+}
