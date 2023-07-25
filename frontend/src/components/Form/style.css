@@ -1,0 +1,17 @@
+.rtm-form {
+	width: calc(100% - 20px);
+}
+
+.rtm-form-group {
+	margin-bottom: 20px;
+}
+
+.rtm-form-group label {
+	font-size: 12px;
+	color: #5e5e5e;
+}
+
+.rtm-form-btn-container {
+	display: flex;
+	justify-content: center;
+}
