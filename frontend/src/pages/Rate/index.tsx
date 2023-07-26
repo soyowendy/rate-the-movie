@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Form from "../../components/Form";
 import './style.css';
 
@@ -16,7 +17,9 @@ function Rate() {
 			<div className="rtm-card-bottom-container">
 				<h3>{movie.title}</h3>
 				<Form/>
-				<button className="btn btn-primary rtm-btn mt-3">Cancel</button>
+				<Link to="/">
+					<button className="btn btn-primary rtm-btn mt-3">Cancel</button>
+				</Link>
 			</div>
 		</div>
 	)

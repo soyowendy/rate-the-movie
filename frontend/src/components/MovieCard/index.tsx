@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import MovieScore from "../MovieScore";
 
 function MovieCard() {
@@ -15,7 +16,10 @@ function MovieCard() {
 			<div className="rtm-card-bottom-container">
 				<h3>{movie.title}</h3>
 				<MovieScore/>
-				<div className="btn btn-primary rtm-btn">Rate</div>
+
+				<Link to={`/movie/${movie.id}`}>
+					<div className="btn btn-primary rtm-btn">Rate</div>
+				</Link>
 			</div>
 		</div>
 	)
