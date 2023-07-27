@@ -12,7 +12,7 @@ function MovieCard( { movie } : Props) {
 			<img className="rtm-movie-card-image" src={movie.image} alt={movie.title} />
 			<div className="rtm-card-bottom-container">
 				<h3>{movie.title}</h3>
-				<MovieScore/>
+				<MovieScore count={movie.count} score={movie.score}/>
 
 				<Link to={`/movie/${movie.id}`}>
 					<div className="btn btn-primary rtm-btn">Rate</div>

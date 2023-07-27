@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './style.css'
 
 function Navbar() {
@@ -5,10 +6,10 @@ function Navbar() {
 		<header>
 			<nav className="container">
 				<div className="rtm-nav-content">
-					<h1>Rate the Movie</h1>
+					<Link to="/"><h1>Rate the Movie</h1></Link>
 					<div className='rtm-nav-content-links'>
-						<i className="bi bi-github"></i>
-						<i className="bi bi-linkedin"></i>
+						<Link to="https://github.com/soyowendy" target="_blank"><i className="bi bi-github"></i></Link>
+						<Link to="https://linkedin.com/in/souowendy" target="_blank"><i className="bi bi-linkedin"></i></Link>
 					</div>
 				</div>
 			</nav>
