@@ -26,9 +26,9 @@ function Form({movieId}: Props) {
 			method: "PUT",
 			url: "/scores",
 			data: {
-				email: email,
+				userEmail: email,
 				movieId: movieId,
-				score: score
+				score: Number(score)
 			}
 		}
 
