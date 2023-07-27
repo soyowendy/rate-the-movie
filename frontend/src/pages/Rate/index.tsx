@@ -23,7 +23,7 @@ function Rate() {
 			<img className="rtm-movie-card-image" alt={`${movie?.title} poster`} src={movie?.image} />
 			<div className="rtm-card-bottom-container">
 				<h3>{movie?.title}</h3>
-				<Form/>
+				<Form movieId={movie?.id}/>
 				<Link to="/">
 					<button className="btn btn-primary rtm-btn mt-3">Cancel</button>
 				</Link>
