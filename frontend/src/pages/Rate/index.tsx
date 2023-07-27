@@ -1,21 +1,28 @@
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Form from "../../components/Form";
 import './style.css';
+import { Movie } from "../../types/movie";
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { BASE_URL } from "../../utils/requests";
 
 function Rate() {
-	const movie = {
-		id: 1,
-		image: "https://www.themoviedb.org/t/p/w600_and_h900_bestv2/8Gxv8gSFCU0XGDykEGv7zR1n2ua.jpg",
-		title: "Oppenheimer",
-		count: 3,
-		score: 4.9
-	}
+	const params = useParams();
+
+	const [movie, setMovie] = useState<Movie>();
+
+	useEffect(() => {
+		axios.get(`${BASE_URL}/movies/${params.movieId}`)
+			.then(response => {
+				setMovie(response.data);
+			});
+	}, [params.movieId]);
 
 	return (
 		<div className="rtm-form-container">
-			<img className="rtm-movie-card-image" alt="Movie Poster" src={movie.image} />
+			<img className="rtm-movie-card-image" alt={`${movie?.title} poster`} src={movie?.image} />
 			<div className="rtm-card-bottom-container">
-				<h3>{movie.title}</h3>
+				<h3>{movie?.title}</h3>
 				<Form/>
 				<Link to="/">
 					<button className="btn btn-primary rtm-btn mt-3">Cancel</button>
